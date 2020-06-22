@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  main:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: pytest -v
+    image: property_based_testing_demo
+    volumes:
+      - ./app/:/app/
